@@ -9,17 +9,17 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>229C Physics Building</p>
+    <p>Syraqcuse University</p>
+    <p>Syracuse, NY</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am currently a postdocoral researcher working with Lisa Manning in the Syracuse University Physics Department. I received my Ph.D. in Computational Biology and Bioinformatics in 2024 from Yale University advised by Corey O'Hern. I recevied my B.S. in Biochemistry and molecular biology and B.A. in Philosophy from the Pennsylvania State University in 2018.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+How can we apply approaches from soft matter physics to better understand protein structure and folding? My PhD study comes in two parts: First, applying careful analysis of the features of protein core packing to quantify the quality of protein structural models. Second, bringing concepts from glass and jamming literature to better understand the protein folding process.
+​
+As a researcher, I seek to develop insightful, key features to quantify, understand and design not only proteins but also other complex disordered materials.
