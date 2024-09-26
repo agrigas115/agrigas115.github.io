@@ -14,46 +14,42 @@
       "countryCode": "US",
       "region": "California"
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
+      "name": "Physics Department, Syracuse University",
+      "position": "Postdoctoral Researcher",
       "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
-    }
+      "startDate": "May 2024",
+      "endDate": "",
+      "summary": "Postodoctoral research working with Prof. Lisa Manning on modeling stellate mesencymal tissues."    
+    },
   ],
   "education": [
     {
-      "institution": "Yale University , New Haven, CT",
+      "institution": "Yale University",
       "location": "New Haven, CT",
       "area": "Computational Biology and Bioinformatics",
       "studyType": "PhD",
       "startDate": "August 2018",
       "endDate": "May 2024",
-    }
+    },
+    {
+      "institution": "The Pennsylvanian State University",
+      "location": "State College, PA",
+      "area": "Biochemistry and Molecular Biology, Magna Cum Laude",
+      "studyType": "BS",
+      "startDate": "August 2014",
+      "endDate": "May 2018",
+    },
+    {
+      "institution": "The Pennsylvanian State University",
+      "location": "State College, PA",
+      "area": "Philosophy, Summa Cum Laude",
+      "studyType": "BA",
+      "startDate": "August 2014",
+      "endDate": "May 2018",
+    },
   ],
   "awards": [
     {
