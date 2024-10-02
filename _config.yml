@@ -313,7 +313,7 @@ display_categories: ["external-services"] # these categories will be displayed o
 
 scholar:
   last_name: [Grigas]
-  first_name: [Alex, T.]
+  first_name: [Alex T.]
 
   style: apa
   locale: en
