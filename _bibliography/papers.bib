@@ -1,3 +1,36 @@
+@misc{grigas2024proteinfoldingjammingtransition,
+      abstract={Proteins fold to a specific functional conformation with a densely packed hydrophobic core that controls their stability. We develop a geometric, yet all-atom model for proteins that explains the universal core packing fraction of ϕc=0.55 found in experimental measurements. We show that as the hydrophobic interactions increase relative to the temperature, a novel jamming transition occurs when the core packing fraction exceeds ϕc. The model also recapitulates the global structure of proteins since it can accurately refold to native-like structures from partially unfolded states.},
+      title={Protein folding as a jamming transition}, 
+      author={Alex T. Grigas and Zhuoyi Liu and Jack A. Logan and Mark D. Shattuck and Corey S. O'Hern},
+      year={2024},
+      eprint={2405.09646},
+      archivePrefix={arXiv},
+      primaryClass={cond-mat.soft},
+      url={https://arxiv.org/abs/2405.09646},
+      pdf={protein_jamming_arxiv.pdf}
+}
+
+@misc{liu2024identifyingminimalsetsdistance,
+      abstract={Proteins naturally occur in crowded cellular environments and interact with other proteins, nucleic acids, and organelles. Since most previous experimental protein structure determination techniques require that proteins occur in idealized, non-physiological environments, the effects of realistic cellular environments on protein structure are largely unexplored. Recently, Förster resonance energy transfer (FRET) has been shown to be an effective experimental method for investigating protein structure in vivo. Inter-residue distances measured in vivo can be incorporated as restraints in molecular dynamics (MD) simulations to model protein structural dynamics in vivo. Since most FRET studies only obtain inter-residue separations for a small number of amino acid pairs, it is important to determine the minimum number of restraints in the MD simulations that are required to achieve a given root-mean-square deviation (RMSD) from the experimental structural ensemble. Further, what is the optimal method for selecting these inter-residue restraints? Here, we implement several methods for selecting the most important FRET pairs and determine the number of pairs Nr that are needed to induce conformational changes in proteins between two experimentally determined structures. We find that enforcing only a small fraction of restraints, Nr/N≲0.08, where N is the number of amino acids, can induce the conformational changes. These results establish the efficacy of FRET-assisted MD simulations for atomic scale structural modeling of proteins in vivo.},
+      title={Identifying the minimal sets of distance restraints for FRET-assisted protein structural modeling}, 
+      author={Zhuoyi Liu and Alex T. Grigas and Jacob Sumner and Edward Knab and Caitlin M. Davis and Corey S. O'Hern},
+      year={2024},
+      eprint={2405.07983},
+      archivePrefix={arXiv},
+      primaryClass={physics.bio-ph},
+      url={https://arxiv.org/abs/2405.07983}, 
+}
+
+@misc{sumner2024assessmentscoringfunctionscomputational,
+      abstract={A goal of computational studies of protein-protein interfaces (PPIs) is to predict the binding site between two monomers that form a heterodimer. The simplest version of this problem is to rigidly re-dock the bound forms of the monomers, which involves generating computational models of the heterodimer and then scoring them to determine the most native-like models. Scoring functions have been assessed previously using rank- and classification-based metrics, however, these methods are sensitive to the number and quality of models in the scoring function training set. We assess the accuracy of seven PPI scoring functions by comparing their scores to a measure of structural similarity to the x-ray crystal structure (i.e. the DockQ score) for a non-redundant set of heterodimers from the Protein Data Bank. For each heterodimer, we generate re-docked models uniformly sampled over DockQ and calculate the Spearman correlation between the PPI scores and DockQ. For some targets, the scores and DockQ are highly correlated; however, for many targets, there are weak correlations. Several physical features can explain the difference between difficult- and easy-to-score targets. For example, strong correlations exist between the score and DockQ for targets with highly intertwined monomers and many interface contacts. We also develop a new score based on only three physical features that matches or exceeds the performance of current PPI scoring functions. These results emphasize that PPI prediction can be improved by focusing on correlations between the PPI score and DockQ and incorporating more discriminating physical features into PPI scoring functions.},
+      title={Assessment of scoring functions for computational models of protein-protein interfaces}, 
+      author={Jacob Sumner and Grace Meng and Naomi Brandt and Alex T. Grigas and Andrés Córdoba and Mark D. Shattuck and Corey S. O'Hern},
+      year={2024},
+      eprint={2407.16580},
+      archivePrefix={arXiv},
+      primaryClass={q-bio.BM},
+      url={https://arxiv.org/abs/2407.16580}, 
+}
 
 @article{subgroup:GrigasPRE2024,
   abstract={Previous studies have shown that the interiors of proteins are densely packed, reaching packing fractions that are as large as those found for static packings of individual amino-acid-shaped particles. How can the interiors of proteins take on such high packing fractions given that amino acids are connected by peptide bonds and many amino acids are hydrophobic with attractive interactions? We investigate this question by comparing the structural and mechanical properties of collapsed attractive disk-shaped bead-spring polymers to those of three reference systems: static packings of repulsive disks, of attractive disks, and of repulsive disk-shaped bead-spring polymers. We show that the attractive systems quenched to temperatures below the glass transition 𝑇≪𝑇𝑔 and static packings of both repulsive disks and bead-spring polymers possess similar interior packing fractions. Previous studies have shown that static packings of repulsive disks are isostatic at jamming onset, i.e., the number of interparticle contacts 𝑁𝑐 matches the number of degrees of freedom, which strongly influences their mechanical properties. We find that repulsive polymer packings are hypostatic at jamming onset (i.e., with fewer contacts than degrees of freedom) but are effectively isostatic when including stabilizing quartic modes, which give rise to quartic scaling of the potential energy with displacements along these modes. While attractive disk and polymer packings are often considered hyperstatic with excess contacts over the isostatic number, we identify a definition for interparticle contacts for which they can also be considered as effectively isostatic. As a result, we show that the mechanical properties (e.g., scaling of the potential energy with excess contact number and low-frequency contribution to the density of vibrational modes) of weakly attractive disk and polymer packings are similar to those of isostatic repulsive disk and polymer packings. Our results demonstrate that static packings generated via attractive collapse or compression of repulsive particles possess similar structural and mechanical properties.},
@@ -48,3 +81,35 @@
     year = {2020},
     pdf={NMR_xtal_v1.pdf}
 }
+
+
+@article{cite-key,
+	abstract = {Compartmentalization by complex coacervation is important across a range of different fields including subcellular and prebiotic organization, biomedicine, food science, and personal care products. Often, lipid self-assemblies such as vesicles are also present intracellularly or in commercial formulations. A systematic understanding of how phospholipid vesicles interact with different complex coacervates could provide insight and improve control over these systems. In this manuscript, anionic phospholipid vesicles were added to a series of different complex coacervate samples in which coacervates were formed by mixing one of five polycations with one of three (poly)anions that varied in chemical structure and length. Vesicles were found to assemble at the coacervate/continuous phase interface and/or form aggregates. We report how factors such as the charge density of polyelectrolytes and the charge ratio of cationic-to-anionic moieties impact the vesicle distribution in coacervate samples. Our findings emphasize the importance of interactions between vesicles and polycations in the dilute supernatant phase for determining whether the vesicles aggregate prior to assembly at the liquid--liquid interface. The uptake of an RNA oligonucleotide (A15) was also investigated to understand the effect of these liposome coatings on diffusion into coacervate droplets. Systems in which uniform vesicle coronas assemble around coacervate droplets without restricting the entry of biomolecules such as RNAs could be of interest as bioreactors.},
+	author = {Pir Cakmak, Fatma and Grigas, Alex T. and Keating, Christine D.},
+	date = {2019/06/18},
+	journal = {Langmuir},
+	m3 = {doi: 10.1021/acs.langmuir.9b00213},
+	month = {06},
+	number = {24},
+	pages = {7830--7840},
+	publisher = {American Chemical Society},
+	title = {Lipid Vesicle-Coated Complex Coacervates},
+	ty = {JOUR},
+	url = {https://doi.org/10.1021/acs.langmuir.9b00213},
+	volume = {35},
+	year = {2019}
+}
+
+
+@article{inorganics7030039,
+	abstract = {The influence of the environment on the functionality of the oxygen-evolving complex (OEC) of photosystem II has long been a subject of great interest. In particular, various water channels, which could serve as pathways for substrate water diffusion, or proton translocation, are thought to be critical to catalytic performance of the OEC. Here, we address the dynamical nature of hydrogen bonding along the water channels by performing molecular dynamics (MD) simulations of the OEC and its surrounding protein environment in the S1 and S2 states. Through the eigenvector centrality (EC) analysis, we are able to determine the characteristics of the water network and assign potential functions to the major channels, namely that the narrow and broad channels are likely candidates for proton/water transport, while the large channel may serve as a path for larger ions such as chloride and manganese thought to be essential during PSII assembly.},
+	article-number = {39},
+	author = {Reiss, Krystle and Morzan, Uriel N. and Grigas, Alex T. and Batista, Victor S.},
+	issn = {2304-6740},
+	journal = {Inorganics},
+	number = {3},
+	title = {Water Network Dynamics Next to the Oxygen-Evolving Complex of Photosystem II},
+	volume = {7},
+	year = {2019}
+}
+
