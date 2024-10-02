@@ -24,8 +24,9 @@ How can we apply approaches from soft matter physics to better understand protei
 As a researcher, I seek to develop insightful, key features to quantify, understand and design not only proteins but also other complex disordered materials.
 
 Protein Decoy Detection:
-
+<div align='center'>
 <img src="../assets/img/decoy_detection.png" width="50%" height="50%" style="display: block;"  />
+</div>
 
 Given a set of predictions of the 3D structure of a protein, how do we select the most accurate prediction without knowing the right answer? If you have AlphaFold2, RosettaFold and ESMFold predictions that all disagree, which one should you trust and why?
 
