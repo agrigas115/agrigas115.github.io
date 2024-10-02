@@ -75,7 +75,7 @@ We carefully consider the quality of both x-ray crystal and NMR protein structur
 </head>
 <body>
     <video width="640" height="480" autoplay loop muted>
-        <source src="../assets/videos/cd_jamming.mp4" type="video/mp4">
+        <source src="../assets/video/cd_jamming.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </body>
