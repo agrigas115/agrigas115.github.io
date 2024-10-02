@@ -17,13 +17,31 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Block Example</title>
+    <style>
+        .title-block {
+            font-size: 2em; /* Adjust size as needed */
+            text-decoration: underline; /* Underline the text */
+            margin: 20px; /* Optional spacing */
+            text-align: center; /* Optional: center the text */
+        }
+    </style>
+</head>
+
 I am currently a postdocoral researcher working with Lisa Manning in the Syracuse University Physics Department. I received my Ph.D. in Computational Biology and Bioinformatics in 2024 from Yale University advised by Corey O'Hern. I recevied my B.S. in Biochemistry and molecular biology and B.A. in Philosophy from the Pennsylvania State University in 2018.
 
 How can we apply approaches from soft matter physics to better understand protein structure and folding? My PhD study comes in two parts: First, applying careful analysis of the features of protein core packing to quantify the quality of protein structural models. Second, bringing concepts from glass and jamming literature to better understand the protein folding process.
 ​
 As a researcher, I seek to develop insightful, key features to quantify, understand and design not only proteins but also other complex disordered materials.
 
-Protein Decoy Detection:
+<div class="title-block">
+  Protein Decoy Detection:
+</div>
+
 <div align='center'>
 <img src="../assets/img/decoy_detection.png" width="50%" height="50%" style="display: block;"  />
 </div>
