@@ -33,7 +33,8 @@
 
 
 - title: Experience
-
+  type: time_table
+  contents:
     - title: Postdoctoral Research
       institution: Syracuse University
       year: 2024 - 
