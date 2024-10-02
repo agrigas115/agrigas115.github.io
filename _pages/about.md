@@ -68,18 +68,10 @@ We carefully consider the quality of both x-ray crystal and NMR protein structur
   The connection between polymer collapse and jamming:
 </div>
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <video width="640" height="480" autoplay loop muted>
-        <source src="../assets/video/cd_jamming.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</body>
-</html>
+<video width="600" height="400" controls autoplay muted>
+  <source src="../assets/video/cd_jamming.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 The cores of proteins are quite dense, as dense as a jammed packing of amino-acid-shaped particles. But proteins fold due to attractive interactions; what does the thermal collapse of an attractive polymer have to do with a jammed packing of a repulsive polymer? <br>
 
