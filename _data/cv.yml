@@ -10,7 +10,7 @@
   type: time_table
   contents:
     - title: Postdoctoral Research
-      institution: Syracuse University, Physics Department
+      institution: Syracuse University, Syracuse, NY
       year: 2024 - Present
       description:
         - Adviser - Lisa Manning
@@ -22,7 +22,7 @@
       institution: Yale University, New Haven, CT
       year: 2018-2024
       description:
-        - Thesis "Investigating protein foling, polymer collapse and jamming"
+        - Thesis "Investigating the connection between protein foling, polymer collapse and jamming"
         - Adviser - Corey O'Hern
 
     - title: B.S., Biochemistry and Molecular Biology
