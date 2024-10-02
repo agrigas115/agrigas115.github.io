@@ -3,10 +3,8 @@
   contents:
     - name: Full Name
       value: Alex T. Grigas
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English
+    - name: email
+      value: atgrigas@syr.edu
 
 - title: Education
   type: time_table
@@ -44,11 +42,16 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2024
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - 1st place 5-minute thesis competition | U. S. National Committee for Theoretical and Applied Mechanics 
+    - year: 2023
       items:
-        - Max Planck Medal
+        - Protein Society Graduate Student Poster Award 
+        - Finn Wold and Protein Science Young Investigator Travel Award 
+    - year: 2018
+      items:
+        - Paul Axt Prize | Penn State Schreyer’s Honors College 
+        - Biochemistry and Molecular Biology Outstanding Student 
+        - Penn State Philosophy Department Student Marshal 
 
