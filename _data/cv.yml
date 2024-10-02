@@ -6,6 +6,15 @@
     - name: email
       value: atgrigas@syr.edu
 
+- title: Academic Positions
+  type: time_table
+  contents:
+    - title: Postdoctoral Research
+      institution: Syracuse University, Physics Department
+      year: 2024 - Present
+      description:
+        - Adviser - Lisa Manning
+
 - title: Education
   type: time_table
   contents:
@@ -20,24 +29,17 @@
       institution: Pennsylvania State University, State College, PA
       year: 2014-2018
       description:
-        - Honors Thesis ""
+        - Honors Thesis "Phospholipid Bilayer Formation on Protocell Models"
         - Adviser - Christine Keating
+        - Minor in Chemistry
+        - Magna cum laude
 
     - title: B.A., Philosophy
       institution: Pennsylvania State University, State College, PA
       year: 2014-2018
       description:
         - Adviser - Emily Grosholz
-
-
-- title: Experience
-  type: time_table
-  contents:
-    - title: Postdoctoral Research
-      institution: Syracuse University
-      year: 2024 - 
-      description:
-        - Adviser - Lisa Manning
+        - Summa cum laude
 
 - title: Honors and Awards
   type: time_table
