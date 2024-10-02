@@ -25,7 +25,7 @@ As a researcher, I seek to develop insightful, key features to quantify, underst
 
 Protein Decoy Detection:
 
-<img src="../assests/img/decoy_detection.png" style="display: block; margin: auto;" />
+<img src="../assets/img/decoy_detection.png" style="display: block; margin: auto;" />
 
 Given a set of predictions of the 3D structure of a protein, how do we select the most accurate prediction without knowing the right answer? If you have AlphaFold2, RosettaFold and ESMFold predictions that all disagree, which one should you trust and why?
 
