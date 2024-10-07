@@ -44,7 +44,7 @@ As a researcher, I seek to develop insightful, key features to quantify, underst
 
 <div align='center'>
 <img src="../assets/img/decoy_detection.png" width="50%" height="50%" style="display: block;"  />
-</div>
+</div> <br>
 
 Given a set of predictions of the 3D structure of a protein, how do we select the most accurate prediction without knowing the right answer? If you have AlphaFold2, RosettaFold and ESMFold predictions that all disagree, which one should you trust and why? <br><br>
 
@@ -67,6 +67,10 @@ We carefully consider the quality of both x-ray crystal and NMR protein structur
 <div class="title-block">
   The connection between polymer collapse and jamming:
 </div>
+
+<div align='center'>
+<img src="../assets/video/cd_jamming.gif" width="50%" height="50%" style="display: block;"  />
+</div> <br>
 
 <video width="600" height="400" controls autoplay muted>
   <source src="../assets/video/cd_jamming.mp4" type="video/mp4">
