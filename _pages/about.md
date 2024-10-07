@@ -56,7 +56,7 @@ We demonstrate how high quality x-ray crystal structures have a few key features
 
 <div align='center'>
 <img src="../assets/img/NMR_vs_xtal.png" width="50%" height="50%" style="display: block;"  />
-</div>
+</div> <br>
 
 X-ray crystallography is the standard method for solving a protein's structure at atomic scale with a clear measure of resolution. There have long been concerns that the crystalline environment and low temperatures leads to artifacts in the structure. NMR spectroscopy has been used to solve protein structures in-solution and at room temperature. However, more modeling steps are involved and there is no agreed upon metric of resolution. <br><br>
 
