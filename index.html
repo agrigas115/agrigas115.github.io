@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexander Grigas</title>
+<style>
+  /* ── Reset & Base ── */
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0f1117;
+    --bg-card: #181a22;
+    --bg-card-hover: #1e2130;
+    --text: #e4e4e7;
+    --text-muted: #9294a0;
+    --accent: #60a5fa;
+    --accent-dim: rgba(96, 165, 250, 0.12);
+    --border: #2a2d3a;
+    --max-w: 900px;
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+  a:hover { opacity: 0.8; }
+
+  /* ── Nav ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15, 17, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-name { font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a { color: var(--text-muted); font-size: 0.88rem; font-weight: 500; }
+  .nav-links a:hover { color: var(--text); }
+
+  /* ── Sections ── */
+  section {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 4rem;
+  }
+  .hero-content { max-width: 600px; }
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+  .hero .subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero .links {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  .hero .links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    transition: all 0.25s;
+  }
+  .hero .links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+    opacity: 1;
+  }
+  .hero .links svg { width: 16px; height: 16px; }
+
+  /* ── About ── */
+  .about {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .headshot-wrap {
+    width: 180px; height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 2px solid var(--border);
+    background: var(--bg-card);
+    flex-shrink: 0;
+  }
+  .headshot-wrap img { width: 100%; height: 100%; object-fit: cover; }
+  .headshot-placeholder {
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted); font-size: 0.8rem; text-align: center;
+    padding: 1rem;
+  }
+  .about-text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.02em;
+  }
+  .about-text p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.8;
+  }
+
+  /* ── Section Heading ── */
+  .section-heading {
+    padding-top: 4rem;
+    margin-bottom: 2.5rem;
+  }
+  .section-heading h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+  }
+  .section-heading .rule {
+    width: 48px; height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    margin-top: 0.6rem;
+  }
+
+  /* ── Project Cards ── */
+  .projects { padding-bottom: 6rem; }
+
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .project-card:hover { border-color: #3a3d4a; }
+
+  .project-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #12141c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .project-media img,
+  .project-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .project-media .placeholder-label {
+    position: absolute;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .project-body { padding: 1.5rem 1.8rem 1.8rem; }
+  .project-body h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.01em;
+  }
+  .project-body .tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+  }
+  .project-body .tag {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--accent-dim);
+    color: var(--accent);
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+  }
+  .project-body p {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+  .project-body .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.8rem;
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+    .headshot-wrap { width: 150px; height: 150px; }
+    .project-body { padding: 1.2rem 1.3rem 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-name">A. Grigas</span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Research</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Alexander Grigas</h1>
+    <p class="subtitle">Computational Biophysicist · Protein Physics &amp; Active Matter</p>
+    <div class="links">
+      <!-- UPDATE: replace with your email -->
+      <a href="mailto:your.email@syr.edu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+        Email
+      </a>
+      <a href="https://github.com/agrigas115" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6.003 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
+        GitHub
+      </a>
+      <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+        Scholar
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── About ── -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="headshot-wrap">
+      <!-- UPDATE: replace with <img src="headshot.jpg" alt="Alexander Grigas"> -->
+      <div class="headshot-placeholder">Your headshot here<br>(headshot.jpg)</div>
+    </div>
+    <div class="about-text">
+      <h2>About</h2>
+      <p>
+        I'm a computational biophysicist working at the intersection of protein physics, 
+        soft matter, and tissue mechanics. Currently a postdoc at Syracuse University 
+        with Lisa Manning and Alessandro Mongera, I develop simulations and 
+        theory that connect molecular-scale packing to tissue-scale mechanics. 
+        My PhD work at Yale (with Corey O'Hern) established that protein fold quality 
+        can be predicted from a binary burial signal at far fewer bits than expected — 
+        reviving fundamental physical questions in the post-AlphaFold era. I'm currently 
+        on the academic job market seeking faculty positions in biophysics and soft matter.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Projects ── -->
+<section class="projects" id="projects">
+  <div class="section-heading">
+    <h2>Research</h2>
+    <div class="rule"></div>
+  </div>
+
+  <!-- ── PROJECT 1: Core Identity ── -->
+  <div class="project-card">
+    <div class="project-media">
+      <!-- UPDATE: replace with <video src="core_id_demo.mp4" autoplay loop muted playsinline></video> -->
+      <!-- or <img src="core_id_figure.png" alt="Core Identity"> -->
+      <span class="placeholder-label">Video or image here</span>
+    </div>
+    <div class="project-body">
+      <h3>Core Identity: Information-Efficient Protein Fold Prediction</h3>
+      <div class="tags">
+        <span class="tag">Protein Physics</span>
+        <span class="tag">Information Theory</span>
+        <span class="tag">ESM2</span>
+      </div>
+      <p>
+        Binary residue burial labels — just which residues are buried and which are exposed — 
+        predict protein fold quality (ρ ≈ 0.92 with LDDT) at ~0.37 bits per residue, 
+        dramatically less information than contacts, 3Di, or other structural channels. 
+        This reveals that core packing identity, not detailed geometry, carries the 
+        dominant structural signal.
+      </p>
+      <a class="project-link" href="https://github.com/agrigas115/core_identity_score" target="_blank">
+        View on GitHub →
+      </a>
+    </div>
+  </div>
+
+  <!-- ── PROJECT 2: Active Matter ── -->
+  <div class="project-card">
+    <div class="project-media">
+      <span class="placeholder-label">Video or image here</span>
+    </div>
+    <div class="project-body">
+      <h3>Active Matter &amp; Tissue Mechanics Simulations</h3>
+      <div class="tags">
+        <span class="tag">Active Matter</span>
+        <span class="tag">Tissue Mechanics</span>
+        <span class="tag">Rheology</span>
+      </div>
+      <p>
+        Simulations of contact inhibition of locomotion (CIL), active spring networks 
+        with stochastic bond dynamics, and Voronoi-based tissue models — probing 
+        how cell-level activity gives rise to emergent mechanical properties 
+        like anomalous rheology and tissue-scale flows.
+      </p>
+    </div>
+  </div>
+
+  <!-- ── PROJECT 3: Copy this template ── -->
+  <!--
+  <div class="project-card">
+    <div class="project-media">
+      <video src="your_video.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="project-body">
+      <h3>Project Title</h3>
+      <div class="tags">
+        <span class="tag">Tag 1</span>
+        <span class="tag">Tag 2</span>
+      </div>
+      <p>Description of the project.</p>
+      <a class="project-link" href="#" target="_blank">Link →</a>
+    </div>
+  </div>
+  -->
+
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  © 2026 Alexander Grigas
+</footer>
+
+<!-- ── Scroll Animation ── -->
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+  document.querySelectorAll('.project-card').forEach((card) => observer.observe(card));
+</script>
+
+</body>
+</html>
