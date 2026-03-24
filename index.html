@@ -199,7 +199,7 @@
   .project-media video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   .project-media .placeholder-label {
     position: absolute;
@@ -234,13 +234,35 @@
     font-size: 0.92rem;
     line-height: 1.75;
   }
-  .project-body .project-link {
+
+  /* ── Project Link Badges ── */
+  .project-links {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .project-links a {
     display: inline-flex;
     align-items: center;
-    gap: 0.3rem;
-    margin-top: 0.8rem;
-    font-size: 0.88rem;
+    gap: 0.35rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 0.82rem;
     font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.25s;
+  }
+  .project-links a:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-dim);
+    opacity: 1;
+  }
+  .project-links a svg {
+    width: 14px;
+    height: 14px;
   }
 
   /* ── Footer ── */
@@ -283,8 +305,7 @@
     <h1>Alexander Grigas</h1>
     <p class="subtitle">Computational Biophysicist · Protein Physics &amp; Active Matter</p>
     <div class="links">
-      <!-- UPDATE: replace with your email -->
-      <a href="mailto:your.email@syr.edu">
+      <a href="mailto:atgrigas@syr.edu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
         Email
       </a>
@@ -304,7 +325,6 @@
 <section class="about" id="about">
   <div class="about-grid">
     <div class="headshot-wrap">
-      <!-- UPDATE: replace with <img src="headshot.jpg" alt="Alexander Grigas"> -->
       <img src="headshot.jpeg" alt="Alexander Grigas">
     </div>
     <div class="about-text">
@@ -333,8 +353,6 @@
   <!-- ── PROJECT 1: Core Identity ── -->
   <div class="project-card">
     <div class="project-media">
-      <!-- UPDATE: replace with <video src="core_id_demo.mp4" autoplay loop muted playsinline></video> -->
-      <!-- or <img src="core_id_figure.png" alt="Core Identity"> -->
       <span class="placeholder-label">Video or image here</span>
     </div>
     <div class="project-body">
@@ -351,16 +369,31 @@
         This reveals that core packing identity, not detailed geometry, carries the 
         dominant structural signal.
       </p>
-      <a class="project-link" href="https://github.com/agrigas115/core_identity_score" target="_blank">
-        View on GitHub →
-      </a>
+      <div class="project-links">
+        <a href="https://github.com/agrigas115/core_identity_score" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6.003 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
+          GitHub
+        </a>
+        <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          arXiv
+        </a>
+        <a href="https://doi.org/XX.XXXX/XXXXXX" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Paper
+        </a>
+        <a href="https://www.biorxiv.org/content/XX.XXXX/XXXXXX" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+          bioRxiv
+        </a>
+      </div>
     </div>
   </div>
 
   <!-- ── PROJECT 2: Active Matter ── -->
   <div class="project-card">
     <div class="project-media">
-      <span class="placeholder-label">Video or image here</span>
+      <video src="CIL_P_ex.mp4" autoplay loop muted playsinline></video>
     </div>
     <div class="project-body">
       <h3>Active Matter &amp; Tissue Mechanics Simulations</h3>
@@ -375,10 +408,20 @@
         how cell-level activity gives rise to emergent mechanical properties 
         like anomalous rheology and tissue-scale flows.
       </p>
+      <div class="project-links">
+        <a href="https://www.biorxiv.org/content/10.64898/2025.12.07.692626v1" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+          bioRxiv
+        </a>
+        <a href="https://github.com/agrigas115/hysteretic_sticking_plus_CIL" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6.003 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
+          GitHub
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- ── PROJECT 3: Copy this template ── -->
+  <!-- ── PROJECT TEMPLATE: Copy and uncomment to add more ── -->
   <!--
   <div class="project-card">
     <div class="project-media">
@@ -391,7 +434,20 @@
         <span class="tag">Tag 2</span>
       </div>
       <p>Description of the project.</p>
-      <a class="project-link" href="#" target="_blank">Link →</a>
+      <div class="project-links">
+        <a href="#" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6.003 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
+          GitHub
+        </a>
+        <a href="#" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          arXiv
+        </a>
+        <a href="#" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Paper
+        </a>
+      </div>
     </div>
   </div>
   -->
