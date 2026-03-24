@@ -493,17 +493,19 @@
 <!-- ── Scroll Animation ── -->
 <script>
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-  document.querySelectorAll('.project-card').forEach((card) => observer.observe(card));
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        const vid = e.target.querySelector('video');
+        if (vid) vid.play().catch(() => {});
+        observer.unobserve(e.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
+document.querySelectorAll('.project-card').forEach((card) => observer.observe(card));
 </script>
 
 </body>
