@@ -350,41 +350,29 @@
     <div class="rule"></div>
   </div>
 
-  <!-- ── PROJECT 1: Core Identity ── -->
+  <!-- ── PROJECT 1: Protein Jamming ── -->
   <div class="project-card">
     <div class="project-media">
       <span class="placeholder-label">Video or image here</span>
     </div>
     <div class="project-body">
-      <h3>Core Identity: Information-Efficient Protein Fold Prediction</h3>
+      <h3>Protein folding as a jamming transition</h3>
       <div class="tags">
         <span class="tag">Protein Physics</span>
-        <span class="tag">Information Theory</span>
-        <span class="tag">ESM2</span>
+        <span class="tag">Jamming</span>
+        <span class="tag">All-atom modeling</span>
       </div>
       <p>
-        Binary residue burial labels — just which residues are buried and which are exposed — 
-        predict protein fold quality (ρ ≈ 0.92 with LDDT) at ~0.37 bits per residue, 
-        dramatically less information than contacts, 3Di, or other structural channels. 
-        This reveals that core packing identity, not detailed geometry, carries the 
-        dominant structural signal.
+        Protein cores all pack to the same density (φ ≈ 0.55), but there has been no physical explanation for why. We show this value marks the onset of a jamming transition: as hydrophobic interactions drive collapse, the core undergoes a floppy-to-rigid transition with the same power-law scaling hallmarks seen in jammed particulate systems. To demonstrate this, I built a new all-atom protein model from scratch — using only hard-core repulsion, bond geometry, and weak hydrophobic attraction — that achieves near-zero Ramachandran and side-chain dihedral outliers without explicit dihedral restraints, staying within ~1 Å RMSD of crystal structures at jamming onset and refolding from partially unfolded states. The model shows that the stereochemical constraints of real amino acids shift jamming onset from φ ≈ 0.63 (simple polymers) down to exactly the φ ≈ 0.55 observed in nature.
       </p>
       <div class="project-links">
-        <a href="https://github.com/agrigas115/core_identity_score" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6.003 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
-          GitHub
-        </a>
-        <a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          arXiv
-        </a>
-        <a href="https://doi.org/XX.XXXX/XXXXXX" target="_blank">
+        <a href="https://doi.org/10.1103/PRXLife.3.013018" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           Paper
         </a>
-        <a href="https://www.biorxiv.org/content/XX.XXXX/XXXXXX" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
-          bioRxiv
+        <a href="https://github.com/agrigas115/HS-HP" target="_blank">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6.003 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
+          GitHub
         </a>
       </div>
     </div>
@@ -396,17 +384,14 @@
       <video src="CIL_P_ex_small.mp4" autoplay loop muted playsinline></video>
     </div>
     <div class="project-body">
-      <h3>Active Matter &amp; Tissue Mechanics Simulations</h3>
+      <h3>Sparse mesenchymal cell networks as a fluid under tension</h3>
       <div class="tags">
         <span class="tag">Active Matter</span>
         <span class="tag">Tissue Mechanics</span>
-        <span class="tag">Rheology</span>
+        <span class="tag">Morphogenesis</span>
       </div>
       <p>
-        Simulations of contact inhibition of locomotion (CIL), active spring networks 
-        with stochastic bond dynamics, and Voronoi-based tissue models — probing 
-        how cell-level activity gives rise to emergent mechanical properties 
-        like anomalous rheology and tissue-scale flows.
+        Embryonic mesenchymal tissues are porous, under tension, and flow like a fluid — a combination that naively should be unstable. We developed a new particle-based interaction model with hysteretic sticking and stochastic bond kinetics to show that contact inhibition of locomotion (CIL) resolves this paradox, directing cell activity away from neighbors to prevent clustering. Mean-field continuum equations connect cell-scale parameters directly to emergent diffusivity, tension, and structural texture, collapsing simulation data across eight orders of magnitude and matching quantitative measurements in the avian presomitic mesoderm.
       </p>
       <div class="project-links">
         <a href="https://www.biorxiv.org/content/10.64898/2025.12.07.692626v1" target="_blank">
