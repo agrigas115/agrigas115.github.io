@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alex T. Grigas</title>
+<link rel="icon" type="image/png" href="protein-72-color.png">
+<!-- Favicon: Protein emoji by Andrew White, CC-BY 4.0, https://github.com/whitead/protein-emoji -->
 <style>
   /* ── Reset & Base ── */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -393,9 +395,9 @@
     line-height: 1.6;
   }
 
-  .cv-pub-list { list-style: none; counter-reset: pub; }
+  .cv-pub-list { list-style: none; counter-reset: pub 11; }
   .cv-pub-list li {
-    counter-increment: pub;
+    counter-increment: pub -1;
     font-size: 0.85rem;
     color: var(--text-muted);
     line-height: 1.7;
@@ -415,6 +417,8 @@
   }
   .cv-pub-list .pub-you { color: var(--text); font-weight: 600; }
   .cv-pub-list .pub-title { font-style: italic; }
+  .cv-pub-list.cv-pub-list-asc { counter-reset: pub 0; }
+  .cv-pub-list.cv-pub-list-asc li { counter-increment: pub 1; }
 
   .cv-inline-list {
     font-size: 0.85rem;
@@ -568,15 +572,8 @@
 
   <!-- ── PROJECT 2: CIL ── -->
   <div class="project-card">
-    <div class="project-media-dual">
-      <div class="dual-panel">
-        <video src="CIL_C_ex_small.mp4" autoplay loop muted playsinline></video>
-        <span class="dual-label">CIL-Crawling</span>
-      </div>
-      <div class="dual-panel">
-        <video src="CIL_P_ex_small.mp4" autoplay loop muted playsinline></video>
-        <span class="dual-label">CIL-Pulling</span>
-      </div>
+    <div class="project-media">
+      <video src="CIL_P_ex_small.mp4" autoplay loop muted playsinline></video>
     </div>
     <div class="project-body">
       <h3>Sparse mesenchymal cell networks as a fluid under tension</h3>
@@ -703,7 +700,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       Under Review &amp; In Preparation
     </h3>
-    <ol class="cv-pub-list">
+    <ol class="cv-pub-list cv-pub-list-asc">
       <li><span class="pub-you">A. T. Grigas</span>, R. S. Negi, E. Maniou, G. L. Galea, A. Michaut, A. Mongera, and M. L. Manning, "Sparse mesenchymal cell networks as a fluid under tension" — Under review, <span class="pub-title">Nature Physics</span> (2025)</li>
       <li>J. Sumner, N. Brandt, G. Meng, <span class="pub-you">A. T. Grigas</span>, A. Cordoba, M. D. Shattuck, and C. S. O'Hern, "Assessment of scoring functions for computational models of protein-protein interfaces" — Under review, <span class="pub-title">Phys. Rev. E</span> (2025)</li>
       <li><span class="pub-you">A. T. Grigas</span>, J. Sumner and C. S. O'Hern, "Residue burial encodes a protein's fold" — In preparation (2026)</li>
