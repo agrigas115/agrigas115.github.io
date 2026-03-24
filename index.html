@@ -64,6 +64,8 @@
 
   /* ── Hero ── */
   .hero {
+    max-width: none;
+    padding: 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -72,6 +74,22 @@
     padding-top: 4rem;
   }
   .hero-content { max-width: 600px; }
+  .hero { position: relative; overflow: hidden; }
+  .hero-video {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.79);
+    min-width: 100%; min-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 17, 23, 0.7);
+    z-index: 1;
+  }
+  .hero-content { position: relative; z-index: 2; }
   .hero h1 {
     font-size: clamp(2.2rem, 5vw, 3.2rem);
     font-weight: 800;
@@ -301,8 +319,12 @@
 
 <!-- ── Hero ── -->
 <section class="hero">
+  <video class="hero-video" autoplay loop muted playsinline>
+    <source src="voro_small.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>Alexander Grigas</h1>
+    <h1>Alex T. Grigas</h1>
     <p class="subtitle">Computational Biophysicist · Protein Physics &amp; Active Matter</p>
     <div class="links">
       <a href="mailto:atgrigas@syr.edu">
@@ -325,7 +347,7 @@
 <section class="about" id="about">
   <div class="about-grid">
     <div class="headshot-wrap">
-      <img src="headshot.jpeg" alt="Alexander Grigas">
+      <img src="headshot.jpeg" alt="Alex T. Grigas">
     </div>
     <div class="about-text">
       <h2>About</h2>
@@ -353,7 +375,7 @@
   <!-- ── PROJECT 1: Protein Jamming ── -->
   <div class="project-card">
     <div class="project-media">
-      <span class="placeholder-label">Video or image here</span>
+      <img src="hshp_jamming.png" alt="Protein jamming transition">
     </div>
     <div class="project-body">
       <h3>Protein folding as a jamming transition</h3>
@@ -368,7 +390,7 @@
       <div class="project-links">
         <a href="https://doi.org/10.1103/PRXLife.3.013018" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          Paper
+          PRX Life
         </a>
         <a href="https://github.com/agrigas115/HS-HP" target="_blank">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 6.003 0c2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
@@ -378,7 +400,7 @@
     </div>
   </div>
 
-  <!-- ── PROJECT 2: Active Matter ── -->
+  <!-- ── PROJECT 2: CIL ── -->
   <div class="project-card">
     <div class="project-media">
       <video src="CIL_P_ex_small.mp4" autoplay loop muted playsinline></video>
@@ -406,6 +428,30 @@
     </div>
   </div>
 
+  <!-- ── PROJECT 3: Polymer Collapse Jamming ── -->
+  <div class="project-card">
+    <div class="project-media">
+      <video src="cd_jamming.mp4" autoplay loop muted playsinline></video>
+    </div>
+    <div class="project-body">
+      <h3>Connecting polymer collapse and the onset of jamming</h3>
+      <div class="tags">
+        <span class="tag">Jamming</span>
+        <span class="tag">Polymer collapse</span>
+        <span class="tag">Core packing</span>
+      </div>
+      <p>
+        Protein cores pack to the same density as jammed repulsive amino acids — but proteins collapse via attraction, not compression. Is the correspondence deep or coincidental? I developed simulations of attractive and repulsive bead-spring polymers and disconnected disks under open boundary conditions, including a novel radial compression protocol for generating jammed packings without periodic boundaries. Collapsed attractive polymers quenched below the glass transition reach the same interior packing fraction as jammed repulsive systems across all system sizes, damping rates, and initial conditions. By decomposing the dynamical matrix into stiffness and stress components, I showed that repulsive polymer packings are hypostatic but effectively isostatic when accounting for quartic modes, and that attractive packings are also effectively isostatic under a contact definition set by the change in interaction stiffness. All four systems — repulsive and attractive, connected and disconnected — share the same power-law scaling for the vibrational density of states and excess contact number, establishing a universal connection between polymer collapse and jamming.
+      </p>
+      <div class="project-links">
+        <a href="https://doi.org/10.1103/PhysRevE.109.034406" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Phys. Rev. E
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- ── PROJECT TEMPLATE: Copy and uncomment to add more ── -->
   <!--
   <div class="project-card">
@@ -428,9 +474,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           arXiv
         </a>
-        <a href="#" target="_blank">
+        <a href="YOUR_DOI_URL" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-          Paper
+          JOURNAL NAME
         </a>
       </div>
     </div>
@@ -441,7 +487,7 @@
 
 <!-- ── Footer ── -->
 <footer>
-  © 2026 Alexander Grigas
+  © 2026 Alex T. Grigas
 </footer>
 
 <!-- ── Scroll Animation ── -->
