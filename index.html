@@ -68,7 +68,7 @@
   .hero {
     max-width: none;
     padding: 0;
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,8 +100,8 @@
     margin-bottom: 0.5rem;
   }
   .hero .subtitle {
-    color: var(--text-muted);
-    font-size: 1.1rem;
+    color: var(--text);
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
   .hero .links {
@@ -117,8 +117,8 @@
     padding: 0.45rem 1rem;
     border: 1px solid var(--border);
     border-radius: 6px;
-    font-size: 0.88rem;
-    color: var(--text-muted);
+    font-size: 1rem;
+    color: var(--text);
     transition: all 0.25s;
   }
   .hero .links a:hover {
@@ -138,10 +138,10 @@
     display: grid;
     grid-template-columns: 180px 1fr;
     gap: 2.5rem;
-    align-items: start;
+    align-items: stretch;
   }
   .headshot-wrap {
-    width: 180px; height: 180px;
+    width: 200px;
     border-radius: 14px;
     overflow: hidden;
     border: 2px solid var(--border);
@@ -554,10 +554,10 @@
         <span class="tag">Decoy detection</span>
       </div>
       <p>
-        How much information is needed to fold a protein? We find that surprisingly, a simple binary representation of whether each residue is either buried in to core or exposed on the surface is enough information to discriminate the correct protein fold from incorrect folds. Moreover, we find that residue burial was the most efficient encoding of a protein's fold, needing only 0.37 bits per residue; more efficient than contact maps, secondary structure, hydrogen bonding satisfaction and even machine learned embedding like Foldseek 3Di.
+        How much information is needed to fold a protein? We find that surprisingly, a simple binary representation of whether each residue is either buried in to core or exposed on the surface is enough information to discriminate the correct protein fold from incorrect folds. Moreover, we find that residue burial was the most efficient encoding of a protein's fold, needing only 0.37 bits per residue; more efficient than contact maps, secondary structure, hydrogen bonding satisfaction and even machine learned embedding like Foldseek 3Di. Check out our preprint linked below.
       </p>
       <div class="project-links">
-        <a href="https://www.biorxiv.org/content/10.64898/2025.12.07.692626v1" target="_blank">
+        <a href="https://www.biorxiv.org/content/10.64898/2026.03.28.714986v1" target="_blank">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
           bioRxiv
         </a>
@@ -581,7 +581,7 @@
         <span class="tag">All-atom modeling</span>
       </div>
       <p>
-        Protein cores all pack to the same density (φ ≈ 0.55), but there has been no physical explanation for why. We show this value marks the onset of a jamming transition: as hydrophobic interactions drive collapse, the core undergoes a floppy-to-rigid transition with the same power-law scaling hallmarks seen in jammed particulate systems. To demonstrate this, I built a new all-atom protein model from scratch — using only hard-core repulsion, bond geometry, and weak hydrophobic attraction — that achieves near-zero Ramachandran and side-chain dihedral outliers without explicit dihedral restraints, staying within ~1 Å RMSD of crystal structures at jamming onset and refolding from partially unfolded states. The model shows that the stereochemical constraints of real amino acids shift jamming onset from φ ≈ 0.63 (simple polymers) down to exactly the φ ≈ 0.55 observed in nature.
+        Protein cores all pack to the same density (φ ≈ 0.55), but there has been no physical explanation for why. We show this value marks the onset of a jamming transition: as hydrophobic interactions drive collapse, the core undergoes a floppy-to-rigid transition with the same power-law scaling hallmarks seen in jammed particulate systems. To demonstrate this, I built a new all-atom protein model from scratch — using only hard-core repulsion, bond geometry, and weak hydrophobic attraction — that achieves near-zero Ramachandran and side-chain dihedral outliers without explicit dihedral restraints, staying within ~1 Å RMSD of crystal structures at jamming onset and refolding from partially unfolded states. Check out our paper published in PRX Life linked below.
       </p>
       <div class="project-links">
         <a href="https://doi.org/10.1103/PRXLife.3.013018" target="_blank">
@@ -616,7 +616,7 @@
         <span class="tag">Morphogenesis</span>
       </div>
       <p>
-        Embryonic mesenchymal tissues are porous, under tension, and flow like a fluid — a combination that naively should be unstable. We developed a new particle-based interaction model with hysteretic sticking and stochastic bond kinetics to show that contact inhibition of locomotion (CIL) resolves this paradox, directing cell activity away from neighbors to prevent clustering. Mean-field continuum equations connect cell-scale parameters directly to emergent diffusivity, tension, and structural texture, collapsing simulation data across eight orders of magnitude and matching quantitative measurements in the avian presomitic mesoderm.
+        Embryonic mesenchymal tissues are sparse, under tension, and flow like a fluid — a combination that naively should be unstable. We developed a new particle-based interaction model with hysteretic sticking and stochastic bond kinetics to show that contact inhibition of locomotion (CIL) resolves this paradox, generating a uniform, tensioned and fluid material. Check out our preprint linked below.
       </p>
       <div class="project-links">
         <a href="https://www.biorxiv.org/content/10.64898/2025.12.07.692626v1" target="_blank">
@@ -651,7 +651,7 @@
         <span class="tag">Core packing</span>
       </div>
       <p>
-        Protein cores pack to the same density as jammed repulsive amino acids — but proteins collapse via attraction, not compression. Is the correspondence deep or coincidental? I developed simulations of attractive and repulsive bead-spring polymers and disconnected disks under open boundary conditions, including a novel radial compression protocol for generating jammed packings without periodic boundaries. Collapsed attractive polymers quenched below the glass transition reach the same interior packing fraction as jammed repulsive systems across all system sizes, damping rates, and initial conditions. By decomposing the dynamical matrix into stiffness and stress components, I showed that repulsive polymer packings are hypostatic but effectively isostatic when accounting for quartic modes, and that attractive packings are also effectively isostatic under a contact definition set by the change in interaction stiffness. All four systems — repulsive and attractive, connected and disconnected — share the same power-law scaling for the vibrational density of states and excess contact number, establishing a universal connection between polymer collapse and jamming.
+        Protein cores pack to the same density as jammed repulsive amino acids — but proteins collapse via attraction, not compression. Is the correspondence deep or coincidental? I developed simulations of attractive and repulsive bead-spring polymers and disconnected disks to better understand the similarities between polymer collapse and compressed packings. See our work in Phys. Rev. E. linked below.
       </p>
       <div class="project-links">
         <a href="https://doi.org/10.1103/PhysRevE.109.034406" target="_blank">
