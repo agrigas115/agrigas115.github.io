@@ -394,9 +394,8 @@
     line-height: 1.6;
   }
 
-  .cv-pub-list { list-style: none; counter-reset: reversed(pub); }
+  .cv-pub-list { list-style: none; }
   .cv-pub-list li {
-    counter-increment: pub;
     font-size: 0.85rem;
     color: var(--text-muted);
     line-height: 1.7;
@@ -406,7 +405,7 @@
   }
   .cv-pub-list li:last-child { margin-bottom: 0; }
   .cv-pub-list li::before {
-    content: counter(pub) ".";
+    content: counter(list-item) ".";
     position: absolute;
     left: 0;
     font-family: var(--mono);
@@ -416,8 +415,6 @@
   }
   .cv-pub-list .pub-you { color: var(--text); font-weight: 600; }
   .cv-pub-list .pub-title { font-style: italic; }
-  .cv-pub-list.cv-pub-list-asc { counter-reset: pub 0; }
-  .cv-pub-list.cv-pub-list-asc li { counter-increment: pub 1; }
 
   .cv-inline-list {
     font-size: 0.85rem;
@@ -724,18 +721,18 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
       Publications
     </h3>
-    <ol class="cv-pub-list" reversed>
-      <li>J. Sumner,  N. Brandt, G. Meng, D. Finlay, <span class="pub-you">A. T. Grigas</span>, A. Córdoba, M. D. Shattuck, and C. S. O'Hern, "Assessment of scoring functions for computational models of protein-protein interfaces," <span class="pub-title">Phys. Rev. E</span> <strong>113</strong> (2026)</li>
-      <li>J. A. Logan, J. Sumner, <span class="pub-you">A. T. Grigas</span>, M. D. Shattuck, and C. S. O'Hern, "The effect of stereochemical constraints on the structural properties of folded proteins," <span class="pub-title">Phys. Rev. E</span> <strong>112</strong> (2025)</li>
-      <li><span class="pub-you">A. T. Grigas</span>, Z. Liu, J. A. Logan, M. D. Shattuck, and C. S. O'Hern, "Protein folding as a jamming transition," <span class="pub-title">PRX Life</span> <strong>3</strong> (2025)</li>
-      <li>S. Viswanath, D. Bhaskar, D. R. Johnson, J. F. Rocha, E. Castro, J. D. Grady, <span class="pub-you">A. T. Grigas</span>, M. A. Perlmutter, C. S. O'Hern, and S. Krishnaswamy, "ProtSCAPE: Mapping the landscape of protein conformations in molecular dynamics," <span class="pub-title">Molecular Machine Learning Conf.</span> (2024)</li>
-      <li><span class="pub-you">A. T. Grigas</span>, A. Fisher, M. D. Shattuck, and C. S. O'Hern, "Connecting polymer collapse and the onset of jamming," <span class="pub-title">Phys. Rev. E</span> <strong>109</strong> (2024)</li>
-      <li>Z. Liu, <span class="pub-you">A. T. Grigas</span>, J. Sumner, E. Knab, C. M. Davis, and C. S. O'Hern, "Identifying the minimal set of distance restraints for FRET-assisted protein structural modeling," <span class="pub-title">Protein Science</span> <strong>33</strong> (2024)</li>
-      <li><span class="pub-you">A. T. Grigas</span>, Z. Liu, L. Regan, and C. S. O'Hern, "Core packing of well-defined x-ray and NMR structures is the same," <span class="pub-title">Protein Science</span> <strong>31</strong> (2022)</li>
-      <li><span class="pub-you">A. T. Grigas</span>, Z. Mei, J. D. Treado, Z. A. Levine, L. Regan, and C. S. O'Hern, "Using physical features of protein core packing to distinguish real proteins from decoys," <span class="pub-title">Protein Science</span> <strong>29</strong> (2020)</li>
-      <li>Z. Mei, J. D. Treado, <span class="pub-you">A. T. Grigas</span>, Z. A. Levine, L. Regan, and C. S. O'Hern, "Analyses of protein cores reveal fundamental differences between solution and crystal structures," <span class="pub-title">Proteins: Struct. Func. Bioinf.</span> <strong>88</strong> (2020)</li>
-      <li>F. P. Cakmak, <span class="pub-you">A. T. Grigas</span>, and C. D. Keating, "Lipid vesicle-coated complex coacervates," <span class="pub-title">Langmuir</span> <strong>35</strong> (2019)</li>
-      <li>K. Reiss, U. N. Morzan, <span class="pub-you">A. T. Grigas</span>, and V. S. Batista, "Water network dynamics next to the oxygen-evolving complex of photosystem II," <span class="pub-title">Inorganics</span> <strong>7</strong> (2019)</li>
+    <ol class="cv-pub-list">
+      <li value="11">J. Sumner,  N. Brandt, G. Meng, D. Finlay, <span class="pub-you">A. T. Grigas</span>, A. Córdoba, M. D. Shattuck, and C. S. O'Hern, "Assessment of scoring functions for computational models of protein-protein interfaces," <span class="pub-title">Phys. Rev. E</span> <strong>113</strong> (2026)</li>
+      <li value="10">J. A. Logan, J. Sumner, <span class="pub-you">A. T. Grigas</span>, M. D. Shattuck, and C. S. O'Hern, "The effect of stereochemical constraints on the structural properties of folded proteins," <span class="pub-title">Phys. Rev. E</span> <strong>112</strong> (2025)</li>
+      <li value="9"><span class="pub-you">A. T. Grigas</span>, Z. Liu, J. A. Logan, M. D. Shattuck, and C. S. O'Hern, "Protein folding as a jamming transition," <span class="pub-title">PRX Life</span> <strong>3</strong> (2025)</li>
+      <li value="8">S. Viswanath, D. Bhaskar, D. R. Johnson, J. F. Rocha, E. Castro, J. D. Grady, <span class="pub-you">A. T. Grigas</span>, M. A. Perlmutter, C. S. O'Hern, and S. Krishnaswamy, "ProtSCAPE: Mapping the landscape of protein conformations in molecular dynamics," <span class="pub-title">Molecular Machine Learning Conf.</span> (2024)</li>
+      <li value="7"><span class="pub-you">A. T. Grigas</span>, A. Fisher, M. D. Shattuck, and C. S. O'Hern, "Connecting polymer collapse and the onset of jamming," <span class="pub-title">Phys. Rev. E</span> <strong>109</strong> (2024)</li>
+      <li value="6">Z. Liu, <span class="pub-you">A. T. Grigas</span>, J. Sumner, E. Knab, C. M. Davis, and C. S. O'Hern, "Identifying the minimal set of distance restraints for FRET-assisted protein structural modeling," <span class="pub-title">Protein Science</span> <strong>33</strong> (2024)</li>
+      <li value="5"><span class="pub-you">A. T. Grigas</span>, Z. Liu, L. Regan, and C. S. O'Hern, "Core packing of well-defined x-ray and NMR structures is the same," <span class="pub-title">Protein Science</span> <strong>31</strong> (2022)</li>
+      <li value="4"><span class="pub-you">A. T. Grigas</span>, Z. Mei, J. D. Treado, Z. A. Levine, L. Regan, and C. S. O'Hern, "Using physical features of protein core packing to distinguish real proteins from decoys," <span class="pub-title">Protein Science</span> <strong>29</strong> (2020)</li>
+      <li value="3">Z. Mei, J. D. Treado, <span class="pub-you">A. T. Grigas</span>, Z. A. Levine, L. Regan, and C. S. O'Hern, "Analyses of protein cores reveal fundamental differences between solution and crystal structures," <span class="pub-title">Proteins: Struct. Func. Bioinf.</span> <strong>88</strong> (2020)</li>
+      <li value="2">F. P. Cakmak, <span class="pub-you">A. T. Grigas</span>, and C. D. Keating, "Lipid vesicle-coated complex coacervates," <span class="pub-title">Langmuir</span> <strong>35</strong> (2019)</li>
+      <li value="1">K. Reiss, U. N. Morzan, <span class="pub-you">A. T. Grigas</span>, and V. S. Batista, "Water network dynamics next to the oxygen-evolving complex of photosystem II," <span class="pub-title">Inorganics</span> <strong>7</strong> (2019)</li>
     </ol>
   </div>
 
@@ -745,7 +742,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       Under Review &amp; In Preparation
     </h3>
-    <ol class="cv-pub-list cv-pub-list-asc">
+    <ol class="cv-pub-list">
       <li><span class="pub-you">A. T. Grigas</span>, R. S. Negi, E. Maniou, G. L. Galea, A. Michaut, A. Mongera, and M. L. Manning, "Sparse mesenchymal cell networks as a fluid under tension" — Under review, <span class="pub-title">Nature Physics</span> (2025)</li>
       <li><span class="pub-you">A. T. Grigas</span>, J. Sumner and C. S. O'Hern, "Residue burial encodes a protein's fold" — Under review, <span class="pub-title">Phys. Rev. Letters</span> (2026)</li>
       <li><span class="pub-you">A. T. Grigas</span> and M. Lisa Manning "A fluid under tension" — In preparation (2026)</li>
