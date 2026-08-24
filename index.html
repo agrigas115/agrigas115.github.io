@@ -220,6 +220,10 @@
     height: 100%;
     object-fit: contain;
   }
+  /* For ultra-wide media (e.g. three panels side by side) — matches the
+     4320x1780 source ratio so the video fills the card without letterboxing. */
+  .project-media.wide { aspect-ratio: 4320 / 1780; }
+
   .project-media .placeholder-label {
     position: absolute;
     color: var(--text-muted);
@@ -578,8 +582,11 @@
   </div>
 
   <div class="project-card">
-    <div class="project-media">
-      <img src="hshp_jamming.png" alt="Protein jamming transition">
+    <div class="project-media wide">
+      <video src="hs_hp_web.mp4" poster="hshp_jamming.png"
+             autoplay loop muted playsinline preload="metadata"
+             aria-label="Three-panel simulation of the protein core jamming transition">
+      </video>
     </div>
     <div class="project-body">
       <h3>Protein folding as a jamming transition</h3>
