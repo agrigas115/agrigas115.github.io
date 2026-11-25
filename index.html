@@ -77,11 +77,14 @@
   }
   .hero-content { max-width: 600px; }
   .hero { position: relative; overflow: hidden; }
+  /* The square video spans the full banner width; the banner crops its top and bottom.
+     On portrait screens (phones) it fills the height instead and the sides are trimmed. */
   .hero-video {
     position: absolute;
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%) scale(0.79);
-    min-width: 100%; min-height: 100%;
+    transform: translate(-50%, -50%);
+    width: 100%; height: auto;
+    min-height: 100%;
     object-fit: cover;
     z-index: 0;
   }
@@ -589,7 +592,7 @@
       </p>
       <div class="project-links">
         <a href="https://arxiv.org/abs/2611.31838" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
           arXiv
         </a>
         <a href="https://github.com/agrigas115/hysteretic_sticking_plus_CIL/tree/main/fluids_under_tension" target="_blank" rel="noopener noreferrer">
@@ -790,16 +793,16 @@
     </ol>
   </div>
 
-  <!-- Under Review / In Prep -->
+  <!-- Under Review -->
   <div class="cv-card">
     <h3>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      Under Review &amp; In Preparation
+      Under Review
     </h3>
     <ol class="cv-pub-list">
-      <li><span class="pub-you">A. T. Grigas</span>, G. S. P. Hsia, R. S. Negi, E. Maniou, G. L. Galea, A. Michaut, A. Mongera, and M. L. Manning, "Sparse mesenchymal cell networks as a fluid under tension" — Under review, <span class="pub-title">Nature Physics</span> (2025)</li>
-      <li><span class="pub-you">A. T. Grigas</span>, J. Sumner and C. S. O'Hern, "Residue burial encodes a protein's fold" — In revisions, <span class="pub-title">Protein Science</span> (2026)</li>
-      <li><span class="pub-you">A. T. Grigas</span> and M. L. Manning, "Fluids under tension: dynamics, mechanics, and structure of sparse active adhesive networks" — <a href="https://arxiv.org/abs/2611.31838" target="_blank" rel="noopener noreferrer">arXiv:2611.31838</a> (2026)</li>
+      <li><span class="pub-you">A. T. Grigas</span>, G. S. P. Hsia, R. S. Negi, E. Maniou, G. L. Galea, A. Michaut, A. Mongera, and M. L. Manning, "Sparse mesenchymal cell networks as a fluid under tension" — Under review, <span class="pub-title">Nature Physics</span> (2025), <a href="https://www.biorxiv.org/content/10.64898/2025.12.07.692626v1" target="_blank" rel="noopener noreferrer">bioRxiv</a></li>
+      <li><span class="pub-you">A. T. Grigas</span>, J. Sumner and C. S. O'Hern, "Residue burial encodes a protein's fold" — In revisions, <span class="pub-title">Protein Science</span> (2026), <a href="https://www.biorxiv.org/content/10.64898/2026.03.28.714986v1" target="_blank" rel="noopener noreferrer">bioRxiv</a></li>
+      <li><span class="pub-you">A. T. Grigas</span> and M. L. Manning, "Fluids under tension: dynamics, mechanics, and structure of sparse active adhesive networks" — Under review, <span class="pub-title">Phys. Rev. E</span> (2026), <a href="https://arxiv.org/abs/2611.31838" target="_blank" rel="noopener noreferrer">arXiv</a></li>
     </ol>
   </div>
 
@@ -851,7 +854,7 @@
     </h3>
     <div class="cv-entry">
       <span class="cv-entry-title">Research Mentorship</span>
-      <div class="cv-entry-detail">19 mentees across O'Hern and Manning groups: graduate students, postbacs, undergraduates, and high school interns</div>
+      <div class="cv-entry-detail">28 mentees across O'Hern and Manning groups: 6 graduate students, 2 postbacs, 11 undergraduates, and 9 high school interns</div>
     </div>
     <div class="cv-entry">
       <span class="cv-entry-title">Teaching Assistant — Yale University</span>
@@ -905,6 +908,12 @@
       Awards
     </h3>
     <div class="cv-inline-list">
+      <div class="cv-entry">
+        <div class="cv-entry-header">
+          <span class="cv-entry-title">Best Overall Poster — Syracuse BioInspired Institute Symposium</span>
+          <span class="cv-entry-date">2026</span>
+        </div>
+      </div>
       <div class="cv-entry">
         <div class="cv-entry-header">
           <span class="cv-entry-title">1st Place, 5-Minute Thesis — USNC/TAM</span>
