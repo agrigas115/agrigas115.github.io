@@ -574,7 +574,7 @@
   <div class="project-card">
     <div class="project-media duo">
       <video src="tf_disp_web.mp4" poster="tf_disp_web.jpg"
-             autoplay loop muted playsinline preload="metadata"
+             loop muted playsinline preload="none"
              aria-label="Cell displacement fields over the same time window: swirling collective flows under CIL-Crawling, sparse local events under CIL-Pulling">
       </video>
       <span class="media-label" style="left: 25%;">Crawling</span>
@@ -634,7 +634,7 @@
   <div class="project-card">
     <div class="project-media wide">
       <video src="hs_hp_web.mp4" poster="hshp_jamming.png"
-             autoplay loop muted playsinline preload="metadata"
+             loop muted playsinline preload="none"
              aria-label="Three-panel simulation of the protein core jamming transition">
       </video>
     </div>
@@ -665,11 +665,11 @@
   <div class="project-card">
     <div class="project-media-dual">
       <div class="dual-panel">
-        <video src="CIL_C_ex_small.mp4" autoplay loop muted playsinline></video>
+        <video src="CIL_C_ex_small.mp4" loop muted playsinline preload="none"></video>
         <span class="dual-label">CIL-Crawling</span>
       </div>
       <div class="dual-panel">
-        <video src="CIL_P_ex_small.mp4" autoplay loop muted playsinline></video>
+        <video src="CIL_P_ex_small.mp4" loop muted playsinline preload="none"></video>
         <span class="dual-label">CIL-Pulling</span>
       </div>
     </div>
@@ -700,11 +700,11 @@
   <div class="project-card">
     <div class="project-media-dual">
       <div class="dual-panel">
-        <video src="cd_jamming_repulsive.mp4" autoplay loop muted playsinline></video>
+        <video src="cd_jamming_repulsive.mp4" loop muted playsinline preload="none"></video>
         <span class="dual-label">Repulsive compression</span>
       </div>
       <div class="dual-panel">
-        <video src="cd_jamming_attractive.mp4" autoplay loop muted playsinline></video>
+        <video src="cd_jamming_attractive.mp4" loop muted playsinline preload="none"></video>
         <span class="dual-label">Attractive collapse</span>
       </div>
     </div>
@@ -955,15 +955,30 @@
       entries.forEach((e) => {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
-          const vid = e.target.querySelector('video');
-          if (vid) vid.play().catch(() => {});
           observer.unobserve(e.target);
         }
       });
     },
     { threshold: 0.12 }
   );
-  document.querySelectorAll('.project-card').forEach((card) => observer.observe(card));
+  // Card videos have no autoplay and preload="none", so only the banner video downloads on page load.
+  // Each card's videos (both panels in the two-panel cards) start loading and playing when the card
+  // comes within 300 px of the screen.
+  const videoObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('video').forEach((vid) => vid.play().catch(() => {}));
+          videoObserver.unobserve(e.target);
+        }
+      });
+    },
+    { rootMargin: '300px 0px' }
+  );
+  document.querySelectorAll('.project-card').forEach((card) => {
+    observer.observe(card);
+    videoObserver.observe(card);
+  });
 </script>
 
 </body>
